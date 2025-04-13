@@ -33,33 +33,33 @@ for (i = 1; i<=5; i++) {
     else {}
 
     //write the result of the round in the console
-    console.log(".............................");
+    console.log("-----------------------------");
     console.log("Player: " + player);
     console.log("Computer: " + computer);
     console.log("Round " + i + ": " + winner);
     console.log("Score: " + playerScore + ":" + computerScore);
-    console.log(".............................");
+    console.log("-----------------------------");
 
     //which round are we actually in?
     round++
 }
 
 //write the result of the game in the console and ask for a new game
-console.log("-----------------------------");
+console.log("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>");
 console.log("End of game")
 console.log("Score: " + playerScore + ":" + computerScore);
 if (playerScore > computerScore) {
-    console.log("Congratulations, you won!")
+    console.log("Congratulations, you won! (That doesn't make you special, whatsoever)")
 }
 else if (playerScore < computerScore) {
-    console.log("This one you lost. Try again!")
+    console.log("This one you lost. Try again! (If you got the guts, looser)")
 }
 else {
-    console.log("That's a draw. Try again!")
+    console.log("That's a draw. Try again! (Even here you make absolutely no difference)")
 }
 
-console.log('Click on the "Start" button for a new game');
-console.log("-----------------------------");
+console.log(`Click on the "Start" button for a new game (or don't, i don't care)`);
+console.log("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>");
 
 //Function to ask for the players choice and convert choice to lower Case (to make it more versatile in case of different spelling)
 function getPlayerChoice () {   
@@ -68,9 +68,9 @@ function getPlayerChoice () {
     if (answer !== null) {
         answer = answer.toLowerCase()
         if (answer !== "rock" && answer !== "paper" && answer !== "scissor") {   
-            console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");  
-            console.log("you better check your grammar");     
-            console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");    
+            console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");  
+            console.log("you better check your grammar, illiterate");     
+            console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");    
             return getPlayerChoice();
             }
     
@@ -80,7 +80,9 @@ function getPlayerChoice () {
     }
     
     else {
-        
+        console.log("Are you serious??????????????????????????")
+        console.log("Why do you even playing? You ain't got the guts to loose, scaredy-cat. That's a point for the computer")
+        console.log("Are you serious??????????????????????????")
         return "pathetic"
     }
 }
