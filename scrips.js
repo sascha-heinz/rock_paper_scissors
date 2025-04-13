@@ -7,7 +7,7 @@ console.clear();
 //Define global variables (especially needed for counting the score)
 let playerScore = 0;
 let computerScore = 0;
-let drawScore = 0;
+let tieScore = 0;
 let round = 1;
 
 
@@ -27,8 +27,8 @@ for (i = 1; i<=5; i++) {
     else if (winner === "computer won") {
         computerScore++
     }
-    else if (winner === "draw") {
-        drawScore++
+    else if (winner === "tie") {
+        tieScore++
     }
     else {}
 
@@ -55,7 +55,7 @@ else if (playerScore < computerScore) {
     console.log("This one you lost. Try again! (If you got the guts, looser)")
 }
 else {
-    console.log("That's a draw. Try again! (Even here you make absolutely no difference)")
+    console.log("That's a tie. Try again! (Even here you make absolutely no difference)")
 }
 
 console.log(`Click on the "Start" button for a new game (or don't, i don't care)`);
@@ -107,7 +107,7 @@ function getPlayerChoice () {
 //Function to compare players choice and computers choice an decide, who's the winner
 function getWinner (computer, player) {
     if (computer === player) {
-        return "draw"
+        return "tie"
     }
 
     else if (computer === "rock" && player === "paper" || computer === "paper" && player === "scissor" || computer === "scissor" && player === "rock") {
