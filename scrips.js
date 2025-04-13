@@ -1,6 +1,16 @@
-
-
-
+//Loop to call the functions to play the game 5 rounds and count the score
+for (i = 1; i<=5; i++) {
+    const player = getPlayerChoice();
+    const computer = getComputerChoice();
+    const winner = getWinner(computer, player);
+    console.log("");
+    console.log("Player: " + player);
+    console.log("Computer: " + computer);
+    console.log("");
+    console.log("Round " + i + ": " + winner);
+    console.log("");
+    console.log("------------------------------");
+}
 
 
 //Function to ask for the players choice and convert choice to lower Case (to make it more versatile in case of different spelling)
@@ -32,16 +42,16 @@ function getPlayerChoice () {
 
 
 //Function to compare players choice and computers choice an decide, who's the winner
-function winner (playerChoice, computerChoice) {
-    if (computerChoice === playerChoice) {
+function getWinner (computer, player) {
+    if (computer === player) {
         return "draw"
     }
 
-    else if (computerChoice === "rock" && playerChoice === "paper" || computerChoice === "paper" && playerChoice === "scissor") {
+    else if (computer === "rock" && player === "paper" || computer === "paper" && player === "scissor" || computer === "scissor" && player === "rock") {
         return "player won"
     }
 
-    else if (computerChoice === "paper" && playerChoice === "rock" || computerChoice === "scissor" && playerChoice === "paper")
+    else if (computer === "paper" && player === "rock" || computer === "scissor" && player === "paper"  || computer === "rock" && player === "scissor" )
         return "computer won"
     
     else {
@@ -49,16 +59,3 @@ function winner (playerChoice, computerChoice) {
     }
 }
 
-
-
-
-
-//
-const player = getPlayerChoice();
-const computer = getComputerChoice();
-
-
-
-console.log("Player: " + player)
-console.log("Computer: " + computer)
-console.log(winner(player, computer));
