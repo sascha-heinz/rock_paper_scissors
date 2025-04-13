@@ -36,7 +36,7 @@ for (i = 1; i<=5; i++) {
     console.log("-----------------------------");
     console.log("Player: " + player);
     console.log("Computer: " + computer);
-    console.log("Round " + i + ": " + winner);
+    console.log("Round " + i + "/5" + ": " + winner);
     console.log("Score: " + playerScore + ":" + computerScore);
     console.log("-----------------------------");
 
@@ -63,7 +63,7 @@ console.log("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>"
 
 //Function to ask for the players choice and convert choice to lower Case (to make it more versatile in case of different spelling)
 function getPlayerChoice () {   
-    let answer = prompt("Round " + round + ": " + 'Please enter your weapon (rock, paper or scissor)');
+    let answer = prompt("Round " + round + "/5" + ": " + 'Please enter your weapon (rock, paper or scissor)');
     
     if (answer !== null) {
         answer = answer.toLowerCase()
