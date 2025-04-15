@@ -49,16 +49,16 @@ console.log("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>"
 console.log("End of game")
 console.log("Score: " + playerScore + ":" + computerScore);
 if (playerScore > computerScore) {
-    console.log("Congratulations, you won! (That doesn't make you special, whatsoever)")
+    console.log("Congratulations, you won!")
 }
 else if (playerScore < computerScore) {
-    console.log("This one you lost. Try again! (If you got the guts, looser)")
+    console.log("This one you lost. Try again!")
 }
 else {
-    console.log("That's a tie. Try again! (Even here you make absolutely no difference)")
+    console.log("That's a tie. Try again!")
 }
 
-console.log(`Click on the "Start" button for a new game (or don't, i don't care)`);
+console.log(`Click on the "Start" button for a new game`);
 console.log("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>");
 
 //Function to ask for the players choice and convert choice to lower Case (to make it more versatile in case of different spelling)
@@ -69,7 +69,7 @@ function getPlayerChoice () {
         answer = answer.toLowerCase()
         if (answer !== "rock" && answer !== "paper" && answer !== "scissor") {   
             console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");  
-            console.log("you better check your grammar, illiterate");     
+            console.log("you better check your grammar");     
             console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");    
             return getPlayerChoice();
             }
@@ -81,7 +81,7 @@ function getPlayerChoice () {
     
     else {
         console.log("Are you serious??????????????????????????")
-        console.log("Why do you even playing? You ain't got the guts to loose, scaredy-cat. That's a point for the computer")
+        console.log("You better not cancel. That's a point for the computer")
         console.log("Are you serious??????????????????????????")
         return "pathetic"
     }
