@@ -1,15 +1,22 @@
 //putting all the game into a function, so the game only starts, when i ask for it by ckliking the start button
-function game() {
+//function game() {
 
 //Clear Console
-console.clear();
+//console.clear();
 
 //Define global variables (especially needed for counting the score)
 let playerScore = 0;
 let computerScore = 0;
 let tieScore = 0;
 let round = 1;
+const nodeListButtons = document.querySelectorAll("button")
+nodeListButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        alert(button.id);
+    });
+});
 
+/*
 
 
 //Loop to start game and to play the game 5 rounds by calling the functions and count the score
@@ -120,3 +127,5 @@ function getWinner (computer, player) {
 }
 
 }
+
+*/
