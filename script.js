@@ -9,13 +9,35 @@ let playerScore = 0;
 let computerScore = 0;
 let tieScore = 0;
 let round = 1;
-const nodeListButtons = document.querySelectorAll("button")
-nodeListButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-        alert(button.id);
-    });
-});
 
+
+
+
+/* überlegungen zum Aufbau
+1) globale Vriablen festlegen (Global)
+2) for Schleife 5x für
+    2.1) getComputerChoice (Funktion)
+    2.2) getPlayerChoice ()
+        2.2.1) EventListener buttons (Global)
+        2.2.2) 
+
+
+
+
+
+
+
+function getPlayerChoice() {
+    let playersChoice
+    const nodeListButtons = document.querySelectorAll("button")
+    nodeListButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            playersChoice = button.textContent;
+        });
+    });
+
+    return playersChoice
+}
 /*
 
 
