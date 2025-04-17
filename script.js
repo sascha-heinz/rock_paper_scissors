@@ -31,26 +31,40 @@ function game() {
     //Loop to start game and to play the game 5 rounds by calling the functions and count the score
    // for (i = 1; i<=5; i++) {
 
-    let playerChoice
-    let computerChoice
+    let playerChoice;
+    let computerChoice;
+    let winner;
+    let rounds = 1;
+    const maxRounds = 5;
+    let playerScore = 0;
+    let computerScore = 0;
+    let tieScore = 0;
+
+
 
 
    const nodeListButtons = document.querySelectorAll("button")
-        nodeListButtons.forEach((button) => {
+        
+   nodeListButtons.forEach((button) => {
             button.addEventListener("click", () => {
-                playerChoice = button.textContent;
-                console.log(playerChoice)
-                playTheRound();
+                if (rounds <= maxRounds) {
+                    playerChoice = button.textContent;
+                    console.log(playerChoice);
+                    playTheRound();
+                }
+                else {
+                    console.log("End")
+                }
             });
         }); 
   //  }
  
 
     function playTheRound() {
-
         computerChoice = getComputerChoice();
-        
-
+        console.log(computerChoice)
+        winner = getWinner(playerChoice, computerChoice);
+        rounds++
     }
 
 
@@ -58,9 +72,24 @@ function game() {
         const choices = ["Rock", "Paper", "Scissor"];
         return choices[Math.floor(Math.random()*3)];
     }
+
+    function getWinner(playerChoice, computerChoice) {
+        if (playerChoice === computerChoice) {
+            console.log("tie")
+        }
+        else if (playerChoice === "Rock" && computerChoice === "Scissor" || 
+                 playerChoice === "Paper" && computerChoice === "Rock" || 
+                 playerChoice === "Scissor" && computerChoice === "Paper" ) {
+                    console.log("won")
+                 }  
+        else {
+            console.log("lost")
+        }
+
+
+    }
  
- 
- 
+
  
  
  
